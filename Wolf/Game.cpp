@@ -17,7 +17,12 @@ void tellNumPlayers(){
 			system("pause");
 			CLEAR;
 		}
-	} while (numplayers > 15);
+		else if (numplayers < 5) {
+			cout << "Sorry, 5 are min players" << endl;
+			system("pause");
+			CLEAR;
+		}
+	} while (numplayers > 15|| numplayers < 5);
 }
 
 void countRoles() {
