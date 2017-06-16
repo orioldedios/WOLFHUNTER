@@ -417,8 +417,21 @@ void deviner() {
 
 //FUNCIÓN DE NOCHE (NIÑA Y PITONISA BOTS Y PLAYER)
 void night(){
-	deviner();
-	girl();
+	//COMPROVACIÓN DE SI HAY ADIVINA
+	for (int i = 0; i < numplayers; i++)
+	{
+		if (player[i].rol == DEVINER) {
+			deviner();
+		}
+	}
+
+	//COMPROVACIÓN DE SI HAY ADIVINA
+	for (int i = 0; i < numplayers; i++)
+	{
+		if (player[i].rol == GIRL) {
+			girl();
+		}
+	}
 	
 
 }
@@ -438,12 +451,12 @@ void play() {
 	yournameis();
 
 	//COMPROVACIÓN DE ROLES ALEATORIOS
-	/*for (int i = 0; i < numplayers; i++)
+	for (int i = 0; i < numplayers; i++)
 	{
 		cout << player[i].name << ":";
 		printRol(player[i].rol);
 		cout << "\n";
-	}*/
+	}
 
 
 	cout << "YOUR ROL IS: ";
