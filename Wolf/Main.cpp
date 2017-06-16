@@ -7,10 +7,12 @@
 using namespace std;
 
 int main() {
+
 	play();
 
-	system("pause");
-	return 0;
-	
 
+
+
+	STOP;
+	return 0;
 }

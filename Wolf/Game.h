@@ -3,8 +3,19 @@
 
 #include "Character.h"
 
+#define MAX_PLAYERS 15
+#define CLEAR system("cls");
+#define STOP system("pause");
+
 int numplayers;
-Character player[15];
+bool wolfseen = false;
+bool girlbusted = false;
+Character player[MAX_PLAYERS];
+int namesputted[MAX_NAMES];
+int counterarraynames = 0;
+
+char* yourname = new char[100];
+
 
 enum COUNTERS {
 	villagercounter,
@@ -19,10 +30,27 @@ int counters[MAX_COUNTERS];
 
 void play();
 
-enum ROL putarol();
+//FUNCIONES PREVIAS
+char* setNameBot();
 void tellNumPlayers();
-void assignRoles();
 void countRoles();
+void resetCounters();
+void yournameis();
+enum ROL putarol();
+void assignRoles();
+void resetAll();
+void printRol(ROL rol);
+bool comparethisstrings(char* si, char* s2);
+
+//FUNCIONES DE NOCHE
+void girl();
+void girlbot();
+void girlPlayer();
+void deviner();
+void devinerbot();
+void devinerplayer();
+void night();
+
 
 #endif // !_GAME_H_
 

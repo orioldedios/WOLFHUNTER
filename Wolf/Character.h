@@ -4,9 +4,29 @@
 #include <time.h>
 #include <stdlib.h>
 
+enum NAMES {
+	DEFAULT_NAME,
+	TOM,
+	MAX,
+	ALICE,
+	JOHN,
+	TED,
+	SAM,
+	SOPHIE,
+	ADAM,
+	MIA,
+	ANNIE,
+	MARIA,
+	TERESA,
+	SARAH,
+	FERNANDO,
+	CARLOS,
+	MAX_NAMES
+};
 
 enum ROL
 {
+	DEFAULT_ROL,
 	VILLAGER,
 	WOLF,
 	DEVINER,
@@ -22,9 +42,11 @@ class  Character
 {
 public:
 	bool alive = true;
-	char* name = "Player";
+	char* name = "DEFAULT NAME";
 	int numplayer;
 	enum ROL rol;
+	bool characterdiscoveredbydeviner = false;
+
 	 Character();
 	~ Character();
 	bool isAlive();
